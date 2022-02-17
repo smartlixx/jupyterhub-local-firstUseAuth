@@ -27,7 +27,7 @@ RUN /usr/bin/python3 -m pip install --upgrade pip \
         xarray \
         netcdf4 \
         matplotlib \
-        cartopy====0.19.0.post1 \
+        cartopy==0.19.0.post1 \
         nbgrader
         
 # Set nbgrader
