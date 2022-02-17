@@ -3,9 +3,12 @@ MAINTAINER Li Xianxiang <smartlixx@gmail.com>
 
 # DEBIAN_FRONTEND is set to avoid being asked for input and hang during build:
 # https://anonoz.github.io/tech/2020/04/24/docker-build-stuck-tzdata.html
-RUN export DEBIAN_FRONTEND=noninteractive \
- && apt-get update \
- && apt-get install --yes \
+RUN apt-get -y update  && \
+    apt-get -y upgrade && \
+    DEBIAN_FRONTEND=noninteractive \
+    apt-get -y install --no-install-recommends \
+        python3 \
+        python3-dev \
         vim \
         proj-bin \
         libproj-dev \
