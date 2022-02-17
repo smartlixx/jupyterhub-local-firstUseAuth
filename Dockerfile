@@ -28,7 +28,7 @@ RUN /usr/bin/python3 -m pip install --upgrade pip \
         netcdf4 \
         matplotlib \
         cartopy====0.19.0.post1 \
-        nbgrader \
+        nbgrader
         
 # Set nbgrader
 RUN jupyter nbextension install --sys-prefix --py nbgrader --overwrite \
