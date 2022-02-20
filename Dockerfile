@@ -25,6 +25,7 @@ RUN /usr/bin/python3 -m pip install --upgrade pip \
  && pip install jupyter \
         notebook \
         jupyterhub-firstuseauthenticator \
+        jupyterhub-idle-culler \
         numpy \
         pandas \
         xarray \
