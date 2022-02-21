@@ -21,8 +21,9 @@ RUN apt-get -y update  && \
 RUN ln -fs /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 RUN /usr/bin/python3 -m pip install --upgrade pip \
- && pip install shapely --no-binary shapely \
- && pip install jupyter \
+ && pip install --no-cache-dir shapely --no-binary shapely \
+ && pip install --no-cache-dir \
+        jupyter \
         notebook \
         jupyterhub-firstuseauthenticator \
         jupyterhub-idle-culler \
